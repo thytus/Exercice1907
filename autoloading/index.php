@@ -1,5 +1,12 @@
 <?php
 
+spl_autoload_register(
+    function ($className){ 
+        echo ($fileName = __DIR__.'/'.$className.'.php') . "<br/>";
+        require_once $fileName;
+    }
+);
+
 use Human\Human as Human;
 use Human\Leg;
 
