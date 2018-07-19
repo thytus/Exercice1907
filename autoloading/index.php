@@ -1,8 +1,9 @@
 <?php
 
 spl_autoload_register(
-    function ($className){ 
-        echo ($fileName = __DIR__.'/'.$className.'.php') . "<br/>";
+    function ($className) {
+        $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+        $fileName = __DIR__.DIRECTORY_SEPARATOR.$className.'.php';
         require_once $fileName;
     }
 );
@@ -12,6 +13,8 @@ use Human\Leg;
 
 new Leg();
 $logger1 = Logger::getInstance();
+
+echo Child::class;
 
 if (isset($_POST['human'])) {
     $logger1->log('1');
