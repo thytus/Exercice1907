@@ -20,4 +20,3 @@ class Application extends AbstractApplication
         return 'Please, insert your code inside the src/Application::run method';
     }
 }
-
