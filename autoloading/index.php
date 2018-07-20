@@ -9,7 +9,7 @@ spl_autoload_register(
 );
 
 use Human\Human as Human;
-use Human\Leg;
+use Human\Child ;
 
 new Leg();
 $logger1 = Logger::getInstance();
